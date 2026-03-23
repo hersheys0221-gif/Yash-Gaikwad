@@ -1,0 +1,28 @@
+#import math
+
+def circle(radius):
+    return math.pi * radius * radius
+
+def rectangle(l, w):
+    return l * w
+
+def triangle(l, w):
+    return 0.5 * l * w
+
+#import shapes
+
+choice = input("Enter shape (circle/rectangle/triangle): ")
+
+if choice == "circle":
+    r = float(input("Radius: "))
+    print("Area:", shapes.circle(r))
+
+elif choice == "rectangle":
+    l = float(input("Length: "))
+    w = float(input("Width: "))
+    print("Area:", shapes.rectangle(l, w))
+
+elif choice == "triangle":
+    l = float(input("Base: "))
+    w = float(input("Height: "))
+    print("Area:", shapes.triangle(l, w))
