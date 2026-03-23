@@ -1,0 +1,25 @@
+class Library:
+    def __init__(self, book_name, author):
+        self.book_name = book_name
+        self.author = author
+        self.available = True
+
+    def checkout(self):
+        if self.available:
+            self.available = False
+            print("Book issued")
+        else:
+            print("Not available")
+
+    def return_book(self):
+        self.available = True
+        print("Book returned")
+
+    def display(self):
+        print(self.book_name, "-", self.author, "-", self.available)
+
+
+book1 = Library("Python Basics", "ABC")
+book1.display()
+book1.checkout()
+book1.display()
